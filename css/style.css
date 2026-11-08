@@ -1,0 +1,881 @@
+/* =====================================================
+   COFFEE CORNER - COFFEE SHOP MANAGEMENT SYSTEM
+   Complete Updated Responsive Stylesheet
+   ===================================================== */
+
+
+/* ==================== 1. GLOBAL SETTINGS ==================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f5f2;
+    color: #333333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #8b5e3c;
+}
+
+a:hover {
+    color: #5c3924;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 14px;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* ==================== 2. HEADER ==================== */
+
+.header {
+    background-color: #3b2519;
+    color: #ffffff;
+    min-height: 75px;
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.logo span {
+    color: #d6a56f;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    color: #ffffff;
+}
+
+.user-info span {
+    font-size: 14px;
+}
+
+/* Header links */
+
+.header a {
+    color: #ffffff;
+}
+
+.header a:hover {
+    color: #d6a56f;
+}
+
+
+/* ==================== 3. NAVIGATION ==================== */
+
+.topnav {
+    background-color: #ffffff;
+    padding: 12px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-bottom: 1px solid #e5ddd5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+}
+
+.topnav button {
+    background-color: transparent;
+    color: #493326;
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 12px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.topnav button:hover {
+    background-color: #f3ebe3;
+    color: #8b5e3c;
+    border-bottom-color: #8b5e3c;
+}
+
+/* Active Navigation */
+
+.topnav button.active {
+    color: #8b5e3c;
+    background-color: #f3ebe3;
+    border-bottom: 3px solid #8b5e3c;
+}
+
+/* Homepage Navigation */
+
+.home-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.home-nav>a:not(.btn) {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.home-nav>a:not(.btn):hover {
+    color: #d6a56f;
+}
+
+
+/* ==================== 4. BUTTONS ==================== */
+
+.btn {
+    display: inline-block;
+    background-color: #8b5e3c;
+    color: #ffffff;
+    border: 1px solid #8b5e3c;
+    border-radius: 5px;
+    padding: 11px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 5px 3px;
+}
+
+.btn:hover {
+    background-color: #68432c;
+    border-color: #68432c;
+    color: #ffffff;
+}
+
+.btn-small {
+    padding: 7px 13px;
+    font-size: 12px;
+}
+
+.btn-secondary {
+    background-color: #ffffff;
+    color: #8b5e3c;
+    border-color: #8b5e3c;
+}
+
+.btn-secondary:hover {
+    background-color: #f0e6dc;
+    color: #68432c;
+}
+
+.btn-light {
+    background-color: #ffffff;
+    color: #3b2519;
+    border-color: #ffffff;
+}
+
+.btn-light:hover {
+    background-color: #e8d8c8;
+    color: #3b2519;
+}
+
+button:disabled,
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* ==================== 5. MAIN CONTAINER ==================== */
+
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 30px auto;
+    min-height: 400px;
+}
+
+.page-section {
+    display: none;
+    margin-bottom: 35px;
+    scroll-margin-top: 20px;
+}
+
+.page-section.active {
+    display: block;
+}
+
+.page-title {
+    color: #493326;
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.page-subtitle {
+    color: #777777;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.hint {
+    display: block;
+    color: #888888;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+
+/* ==================== 6. CARD DESIGN ==================== */
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e9e1d9;
+    border-radius: 8px;
+    padding: 22px;
+    margin-bottom: 22px;
+    box-shadow: 0 3px 12px rgba(59, 37, 25, 0.05);
+}
+
+.card h3 {
+    color: #5c3924;
+    font-size: 19px;
+    margin-bottom: 17px;
+}
+
+.card p {
+    margin-bottom: 12px;
+}
+
+.card ul {
+    padding-left: 22px;
+}
+
+.card li {
+    margin-bottom: 8px;
+}
+
+
+/* ==================== 7. ROW AND COLUMN ==================== */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.col {
+    flex: 1 1 350px;
+    min-width: 0;
+}
+
+.row>.card {
+    flex: 1 1 350px;
+}
+
+
+/* ==================== 8. STATISTICS CARDS ==================== */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin: 25px 0;
+}
+
+.stat-card {
+    background-color: #ffffff;
+    border-left: 5px solid #9b704e;
+    border-radius: 7px;
+    padding: 22px 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.stat-number {
+    color: #68432c;
+    font-size: 27px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    overflow-wrap: anywhere;
+}
+
+.stat-label {
+    color: #777777;
+    font-size: 13px;
+}
+
+
+/* ==================== 9. FORMS ==================== */
+
+form {
+    width: 100%;
+}
+
+fieldset {
+    border: 1px solid #ded2c6;
+    border-radius: 6px;
+    padding: 18px;
+    margin-bottom: 20px;
+}
+
+legend {
+    color: #68432c;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.form-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.form-table td {
+    padding: 10px 8px;
+    vertical-align: top;
+}
+
+.form-table td:first-child {
+    width: 35%;
+    font-weight: 600;
+    color: #493326;
+}
+
+.form-table input,
+.form-table select,
+.form-table textarea {
+    width: 100%;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #d8cec5;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #333333;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #9b704e;
+    box-shadow: 0 0 0 3px rgba(155, 112, 78, 0.12);
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+.option-label {
+    margin-right: 15px;
+    font-weight: normal;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+
+/* ==================== 10. VALIDATION MESSAGES ==================== */
+
+.error {
+    display: block;
+    color: #c0392b;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.message {
+    display: none;
+    padding: 12px 15px;
+    border-radius: 5px;
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.message.success {
+    display: block;
+    background-color: #e5f5e9;
+    color: #236b38;
+    border: 1px solid #b7dfc0;
+}
+
+.message.error-message {
+    display: block;
+    background-color: #fdeaea;
+    color: #a12b2b;
+    border: 1px solid #edc0c0;
+}
+
+
+/* ==================== 11. TABLES ==================== */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.data-table {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+.data-table th {
+    background-color: #493326;
+    color: #ffffff;
+    padding: 13px 12px;
+    font-size: 13px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.data-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee7e0;
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+.data-table tbody tr:hover {
+    background-color: #faf5f0;
+}
+
+.data-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.data-table .btn {
+    padding: 6px 10px;
+    font-size: 11px;
+    margin: 2px;
+}
+
+.result-count {
+    color: #777777;
+    font-size: 13px;
+    margin: 12px 0;
+}
+
+/* Plain HTML tables */
+
+table:not(.form-table) {
+    max-width: 100%;
+}
+
+
+/* ==================== 13. PRICE SUMMARY ==================== */
+
+.price-summary {
+    background-color: #f8f2ec;
+    border: 1px solid #e5d4c3;
+    border-radius: 6px;
+    padding: 18px;
+    margin: 20px 0;
+}
+
+.price-summary h3 {
+    color: #68432c;
+    margin-bottom: 12px;
+}
+
+.price-summary p {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    border-bottom: 1px solid #e8ddd2;
+    padding: 7px 0;
+}
+
+.price-summary p:last-child {
+    border-bottom: none;
+    font-weight: bold;
+}
+
+.price-summary strong {
+    color: #68432c;
+}
+
+
+/* ==================== 14. BADGES ==================== */
+
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    background-color: #eee3d8;
+    color: #68432c;
+}
+
+.badge.customer {
+    background-color: #e1f0e5;
+    color: #28653a;
+}
+
+
+/* Status Badges */
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 9px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.status-success {
+    background-color: #e5f5e9;
+    color: #236b38;
+}
+
+.status-warning {
+    background-color: #fff2d8;
+    color: #885b1e;
+}
+
+.status-danger {
+    background-color: #fdeaea;
+    color: #a12b2b;
+}
+
+.status-neutral {
+    background-color: #eeeeee;
+    color: #555555;
+}
+
+
+/* ==================== 15. HOMEPAGE HERO SECTION ==================== */
+
+.hero-section {
+    min-height: 480px;
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(110deg, #3b2519, #68432c);
+    color: #ffffff;
+}
+
+.hero-content {
+    max-width: 720px;
+}
+
+.hero-tagline {
+    color: #e2b987;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-size: clamp(32px, 5vw, 54px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    display: block;
+    color: #d6a56f;
+}
+
+.hero-content>p:not(.hero-tagline) {
+    color: #eee2d7;
+    font-size: 16px;
+    max-width: 600px;
+    margin-bottom: 25px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+/* ==================== 16. FOOTER ==================== */
+
+.footer {
+    background-color: #3b2519;
+    color: #e8ddd2;
+    padding: 25px 5%;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer a {
+    color: #d6a56f;
+}
+
+.footer a:hover {
+    color: #ffffff;
+}
+
+
+/* ==================== 17. RESPONSIVE DESIGN ==================== */
+
+@media screen and (max-width: 992px) {
+
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .header {
+        padding: 15px 3%;
+    }
+
+    .home-nav {
+        gap: 10px;
+    }
+
+    .hero-section {
+        min-height: 400px;
+        padding: 60px 6%;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .user-info {
+        justify-content: center;
+    }
+
+    .home-nav {
+        justify-content: center;
+    }
+
+    .topnav {
+        padding: 10px;
+    }
+
+    .topnav button {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .page-title {
+        font-size: 23px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .col {
+        width: 100%;
+        flex-basis: auto;
+    }
+
+    .row>.card {
+        width: 100%;
+        flex-basis: auto;
+    }
+
+    .form-table,
+    .form-table tbody,
+    .form-table tr,
+    .form-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .form-table td:first-child {
+        width: 100%;
+        padding-bottom: 4px;
+    }
+
+    .form-table td {
+        padding: 6px 4px;
+    }
+
+    .hero-section {
+        min-height: 380px;
+        padding: 50px 6%;
+    }
+
+}
+
+
+@media screen and (max-width: 480px) {
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .user-info {
+        gap: 8px;
+    }
+
+    .home-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content>p:not(.hero-tagline) {
+        font-size: 14px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-actions .btn,
+    .form-actions input[type="submit"] {
+        width: 100%;
+    }
+
+}
+
+
+/* ==================== 18. DASHBOARD COMPATIBILITY & SAFETY ==================== */
+
+/* Keep dashboard sections and cards readable */
+
+.container,
+.page-section,
+.card {
+    min-width: 0;
+}
+
+.page-section>h1,
+.page-section>h2,
+.page-section>h3 {
+    color: #493326;
+    margin-bottom: 12px;
+}
+
+.page-section>p {
+    margin-bottom: 18px;
+}
+
+/* Prevent input fields from overflowing */
+
+input,
+select,
+textarea {
+    max-width: 100%;
+}
+
+/* Accessible keyboard focus */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #b98555;
+    outline-offset: 2px;
+}
+
+/* Extra mobile adjustments */
+
+@media screen and (max-width: 480px) {
+
+    .container {
+        width: 92%;
+    }
+
+    fieldset {
+        padding: 12px;
+    }
+
+}
