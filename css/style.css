@@ -886,3 +886,10 @@ textarea:focus-visible {
     background-color: #e1ebf8;
     color: #315b8a;
 }
+
+/* ==================== 14. BADGES ==================== */
+
+.badge.admin {
+    background-color: #e7ddf5;
+    color: #62418b;
+}
