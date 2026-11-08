@@ -879,3 +879,10 @@ textarea:focus-visible {
     }
 
 }
+
+/* ==================== 14. BADGES ==================== */
+
+.badge.cashier {
+    background-color: #e1ebf8;
+    color: #315b8a;
+}
