@@ -102,7 +102,7 @@
                                     </td>
 
                                     <td>
-                                        <select id="coffee" onchange="calculateCustomPrice()" required>
+                                        <select id="coffee" required>
                                             <option value="">-- Select Coffee --</option>
                                         </select>
 
@@ -116,7 +116,7 @@
                                     </td>
 
                                     <td>
-                                        <select id="size" onchange="calculateCustomPrice()" required>
+                                        <select id="size" required>
 
                                             <option value="">-- Select Size --</option>
                                             <option value="Small">Small</option>
@@ -135,7 +135,7 @@
                                     </td>
 
                                     <td>
-                                        <select id="milk" onchange="calculateCustomPrice()" required>
+                                        <select id="milk" required>
 
                                             <option value="">-- Select Milk Type --</option>
 
@@ -157,7 +157,7 @@
                                     </td>
 
                                     <td>
-                                        <select id="sugar" onchange="calculateCustomPrice()" required>
+                                        <select id="sugar" required>
 
                                             <option value="">-- Select Sugar Level --</option>
 
@@ -178,8 +178,7 @@
                                     </td>
 
                                     <td>
-                                        <input type="number" id="quantity" min="1" max="20" value="1"
-                                            oninput="calculateCustomPrice()" required>
+                                        <input type="number" id="quantity" min="1" max="20" value="1" required>
 
                                         <span id="quantityError" class="error"></span>
                                     </td>
@@ -233,8 +232,8 @@
                     </ul>
 
                     <p class="hint">
-                        The system automatically calculates the
-                        customized coffee price.
+                        Click the Calculate Price button to calculate
+                        your customized coffee price.
                     </p>
 
                 </div>
