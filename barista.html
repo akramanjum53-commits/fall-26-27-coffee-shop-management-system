@@ -15,88 +15,81 @@
 
 <body>
 
-    <!-- ==================== HEADER ==================== -->
+    <!--HEADER  -->
 
     <header class="header">
 
-        <a href="index.html" class="logo">
+    <a href="index.html" class="logo">
             Coffee<span>Corner</span>
-        </a>
+     </a>
 
-        <div class="user-info">
+    <div class="user-info">
 
-            <span class="badge staff">Staff / Barista</span>
+     <span class="badge staff">Staff / Barista</span>
 
-            <span id="welcomeUser">Welcome, Diub</span>
+ <span id="welcomeUser">Welcome, Diub</span>
 
-            <a href="#" class="btn btn-small btn-light" onclick="logout(); return false;">
-                Logout
-            </a>
+    <a href="#" class="btn btn-small btn-light" onclick="logout(); return false;">
+    Logout </a>
+</div>
+ </header>
 
-        </div>
-
-    </header>
-
-
-    <!-- ==================== NAVIGATION ==================== -->
+<!-- NAVIGATION -->
 
     <nav class="topnav">
 
-        <button type="button" id="nav-queue" class="active" onclick="showSection('queue')">
-            Order Preparation
+  <button type="button" id="nav-queue" class="active" onclick="showSection('queue')">
+   Order Preparation
+</button>
+  <button type="button" id="nav-stock" onclick="showSection('stock')">
+         Stock Management
         </button>
 
-        <button type="button" id="nav-stock" onclick="showSection('stock')">
-            Stock Management
-        </button>
+<button type="button" id="nav-waste" onclick="showSection('waste')">
+       Damaged / Expired Products
+</button>
 
-        <button type="button" id="nav-waste" onclick="showSection('waste')">
-            Damaged / Expired Products
-        </button>
-
-    </nav>
+ </nav>
 
 
-    <!-- ==================== MAIN CONTAINER ==================== -->
+    <!--MAIN CONTAINER -->
 
-    <main class="container">
+<main class="container">
 
 
-        <!-- =================================================
-             1. ORDER PREPARATION QUEUE
-        ================================================== -->
+ <!--
+             1. ORDER PREPARATION QUEUE  -->
 
-        <section id="queue" class="page-section active">
+ <section id="queue" class="page-section active">
 
-            <h2 class="page-title">
-                Order Preparation Queue
-            </h2>
+ <h2 class="page-title">
+    Order Preparation Queue
+     </h2>
 
-            <p class="page-subtitle">
+         <p class="page-subtitle">
                 View customer orders and update their preparation status.
-            </p>
+      </p>
 
-            <div id="queueMessage" class="message"></div>
+    <div id="queueMessage" class="message"></div>
 
+      <!-- ORDER SUMMARY -->
 
-            <!-- ORDER SUMMARY -->
+      <div class="stats-grid">
 
-            <div class="stats-grid">
+         <div class="stat-card">
 
-                <div class="stat-card">
-
-                    <div class="stat-number" id="totalQueueOrders">
+         <div class="stat-number" id="totalQueueOrders">
                         0
-                    </div>
+        </div>
 
-                    <div class="stat-label">
+        <div class="stat-label">
                         Total Orders
                     </div>
 
-                </div>
+     </div>
 
 
-                <div class="stat-card">
+    <div class="stat-card">
 
                     <div class="stat-number" id="pendingQueueOrders">
                         0
@@ -286,9 +279,9 @@
 
 
 
-        <!-- =================================================
+        <!--
              2. STOCK MANAGEMENT
-        ================================================== -->
+     -->
 
         <section id="stock" class="page-section">
 
@@ -303,16 +296,15 @@
             <div id="stockMessage" class="message"></div>
 
 
-            <!-- STOCK SUMMARY -->
+ <!-- STOCK SUMMARY -->
 
-            <div class="stats-grid">
+ <div class="stats-grid">
 
-                <div class="stat-card">
+ <div class="stat-card">
 
-                    <div class="stat-number" id="totalStockItems">
+<div class="stat-number" id="totalStockItems">
                         0
                     </div>
-
                     <div class="stat-label">
                         Total Stock Items
                     </div>
