@@ -74,64 +74,64 @@ img {
 }
 
 
- 
-        .form-body,
-        .type-fields {
-            display: none;
-        }
 
-        .form-body.active,
-        .type-fields.active {
-            display: block;
-        }
+.form-body,
+.type-fields {
+    display: none;
+}
 
-        .type-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-            margin: 15px 0;
-        }
+.form-body.active,
+.type-fields.active {
+    display: block;
+}
 
-        .type-option {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            padding: 18px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            cursor: pointer;
-            background: #fff;
-        }
+.type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin: 15px 0;
+}
 
-        .type-option:has(input:checked) {
-            border: 2px solid #8b5e3c;
-            background: #faf4ef;
-        }
+.type-option {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 18px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #fff;
+}
 
-        .type-option input {
-            width: auto;
-        }
+.type-option:has(input:checked) {
+    border: 2px solid #8b5e3c;
+    background: #faf4ef;
+}
 
-        .type-option strong {
-            font-size: 17px;
-        }
+.type-option input {
+    width: auto;
+}
 
-        .type-option .hint {
-            font-size: 13px;
-        }
+.type-option strong {
+    font-size: 17px;
+}
 
-        .form-buttons {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
+.type-option .hint {
+    font-size: 13px;
+}
 
-        #registerButton:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-    
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+#registerButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 
 
 
@@ -326,4 +326,536 @@ img {
     cursor: not-allowed;
 }
 
+/* azizur */
+/* ==================== 5. MAIN CONTAINER ==================== */
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 16px;
+    min-height: 75vh;
+}
+
+/* Section is hidden until it gets the "active" class
+   (inline style.display from JavaScript also works).
+   NOTE: a .page-section that has neither "active" nor an inline
+   display style will NOT be visible. */
+.page-section {
+    display: none;
+    margin-bottom: 35px;
+    scroll-margin-top: 70px;
+}
+
+.page-section.active {
+    display: block;
+}
+
+.page-title {
+    margin-bottom: 4px;
+    font-size: 1.6rem;
+}
+
+.page-subtitle {
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+.hint {
+    display: block;
+    font-size: 0.85rem;
+    color: #777777;
+    margin-top: 6px;
+}
+
+/* Lets flex/grid children shrink instead of overflowing the page */
+.container,
+.page-section,
+.card {
+    min-width: 0;
+}
+
+
+/* ==================== 6. CARD DESIGN ==================== */
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #EEEAF5;
+}
+
+.card p {
+    margin-bottom: 12px;
+}
+
+.card ul {
+    padding-left: 22px;
+}
+
+.card li {
+    margin-bottom: 8px;
+}
+
+
+/* ==================== 7. ROW AND COLUMN ==================== */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* FIX 4: min(300px, 100%) so nothing is wider than a small phone screen */
+.col {
+    flex: 1;
+    min-width: min(300px, 100%);
+}
+
+.col-wide {
+    flex: 2;
+    min-width: min(300px, 100%);
+}
+
+.row>.card {
+    flex: 1;
+    min-width: min(300px, 100%);
+}
+
+
+/* ==================== 8. STATISTICS CARDS ==================== */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.stat-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left: 6px solid #663399;
+    transition: transform 0.3s;
+}
+
+.stat-card:hover {
+    transform: scale(1.03);
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1B1F3B;
+    overflow-wrap: anywhere;
+}
+
+.stat-label {
+    color: #666666;
+    font-size: 0.9rem;
+}
+
+
+/* ==================== 9. FORMS ==================== */
+
+fieldset {
+    border: 1px solid #D8D0E8;
+    border-radius: 8px;
+    padding: 12px 16px 16px 16px;
+    margin-bottom: 16px;
+}
+
+legend {
+    font-weight: bold;
+    color: #663399;
+    padding: 0 8px;
+}
+
+.form-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.form-table td {
+    padding: 6px 4px;
+    vertical-align: top;
+}
+
+.form-table td:first-child {
+    width: 35%;
+    padding-top: 12px;
+}
+
+label {
+    font-weight: 600;
+    color: #444444;
+}
+
+.option-label {
+    font-weight: normal;
+    margin-right: 12px;
+}
+
+/* FIX 5: more input types added to the list */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="tel"],
+input[type="search"],
+input[type="url"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #C8C3D4;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    background-color: white;
+}
+
+/* Prevent any field (including type="file") from overflowing */
+input,
+select,
+textarea {
+    max-width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #8E6CC8;
+    border-color: #8E6CC8;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 4px;
+    accent-color: #663399;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+/* ==================== 15. HOMEPAGE HERO SECTION ==================== */
+
+/* Coffee Corner hero (class names kept) */
+.hero-section {
+    min-height: 420px;
+    padding: 70px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #1B1F3B;
+    color: white;
+}
+
+.hero-content {
+    max-width: 720px;
+}
+
+.hero-tagline {
+    color: #C9A7F5;
+    font-weight: bold;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    color: white;
+    font-size: 2.6rem;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 span {
+    display: block;
+    color: #C9A7F5;
+}
+
+.hero-content>p:not(.hero-tagline) {
+    font-size: 1.15rem;
+    color: #D9D4E8;
+    max-width: 650px;
+    margin: 0 auto 24px auto;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hero-actions .btn {
+    padding: 12px 28px;
+}
+
+/* From the BookNest sheet (works if you use these classes) */
+.hero {
+    background-color: #1B1F3B;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 2.6rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    color: #D9D4E8;
+    max-width: 650px;
+    margin: 0 auto 24px auto;
+}
+
+.hero .btn {
+    margin: 4px;
+    padding: 12px 28px;
+}
+
+.hero-search {
+    max-width: 640px;
+    margin: 26px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.hero-search input {
+    flex: 3;
+    min-width: 220px;
+    padding: 13px 16px;
+    font-size: 1rem;
+    border: none;
+}
+
+.hero-search select {
+    flex: 1;
+    min-width: 150px;
+    border: none;
+}
+
+
+/* ==================== 16. FOOTER ==================== */
+
+.footer {
+    background-color: #1B1F3B;
+    color: #BBB6CC;
+    text-align: center;
+    padding: 16px;
+    margin-top: 30px;
+    font-size: 0.88rem;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer a:not(.btn) {
+    color: #D9D4E8;
+    text-decoration: none;
+}
+
+.footer a:not(.btn):hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+/* ==================== 17. ROLE GRID AND BAR CHART ==================== */
+/* These two blocks existed in the old CSS (their mobile rules were in
+   the old file) but were missing in the new one.
+   The base rules below are rebuilt in the same purple theme.
+   If your HTML uses different class names for the bar track / fill,
+   rename .bar-track and .bar-fill to match. */
+
+.role-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.bar-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.bar-label {
+    width: 140px;
+    flex-shrink: 0;
+    font-size: 0.9rem;
+}
+
+.bar-track {
+    flex: 1;
+    min-width: 0;
+    height: 18px;
+    background-color: #EEEAF5;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    background-color: #663399;
+    border-radius: 9px;
+}
+
+.bar-value {
+    width: 60px;
+    flex-shrink: 0;
+    text-align: right;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+
+/* ==================== 18. EXTRA HELPERS ==================== */
+
+.log-item {
+    background-color: white;
+    border-left: 5px solid #663399;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.result-box {
+    background-color: #F7F3FC;
+    border: 2px dashed #C9A7F5;
+    border-radius: 10px;
+    padding: 16px;
+    margin-top: 12px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #8E6CC8;
+    outline-offset: 2px;
+}
+
+
+/* ==================== 19. RESPONSIVE ==================== */
+/* Grids and flex-wrap above already adjust most of the layout.
+   These blocks only handle what they cannot. They must stay at the
+   END of the file so they override the base rules above. */
+
+@media screen and (max-width: 768px) {
+
+    .form-table,
+    .form-table tbody,
+    .form-table tr,
+    .form-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .form-table td:first-child {
+        width: 100%;
+        padding-top: 6px;
+        padding-bottom: 2px;
+    }
+
+    .bar-label {
+        width: 100px;
+        font-size: 0.8rem;
+    }
+
+    .bar-value {
+        width: 40px;
+        font-size: 0.8rem;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .container {
+        padding: 20px 12px;
+    }
+
+    fieldset {
+        padding: 12px;
+    }
+
+    .role-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero,
+    .hero-section {
+        padding: 45px 15px;
+    }
+
+    .hero h1,
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .bar-row {
+        gap: 6px;
+    }
+
+}
+
+
+/* ==================== 20. REDUCED MOTION ==================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .stat-card,
+    .btn,
+    .topnav a,
+    .topnav button {
+        transition: none;
+    }
+
+    .stat-card:hover {
+        transform: none;
+    }
+
+}
+
+
+/* ==================== END OF STYLE.CSS ==================== */
