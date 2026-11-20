@@ -74,64 +74,64 @@ img {
 }
 
 
- 
-        .form-body,
-        .type-fields {
-            display: none;
-        }
 
-        .form-body.active,
-        .type-fields.active {
-            display: block;
-        }
+.form-body,
+.type-fields {
+    display: none;
+}
 
-        .type-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-            margin: 15px 0;
-        }
+.form-body.active,
+.type-fields.active {
+    display: block;
+}
 
-        .type-option {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            padding: 18px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            cursor: pointer;
-            background: #fff;
-        }
+.type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin: 15px 0;
+}
 
-        .type-option:has(input:checked) {
-            border: 2px solid #8b5e3c;
-            background: #faf4ef;
-        }
+.type-option {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 18px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #fff;
+}
 
-        .type-option input {
-            width: auto;
-        }
+.type-option:has(input:checked) {
+    border: 2px solid #8b5e3c;
+    background: #faf4ef;
+}
 
-        .type-option strong {
-            font-size: 17px;
-        }
+.type-option input {
+    width: auto;
+}
 
-        .type-option .hint {
-            font-size: 13px;
-        }
+.type-option strong {
+    font-size: 17px;
+}
 
-        .form-buttons {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
+.type-option .hint {
+    font-size: 13px;
+}
 
-        #registerButton:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-    
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+#registerButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 
 
 
@@ -326,4 +326,238 @@ img {
     cursor: not-allowed;
 }
 
+/* azizur */
+/* ==================== 5. MAIN CONTAINER ==================== */
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 16px;
+    min-height: 75vh;
+}
+
+/* Section is hidden until it gets the "active" class
+   (inline style.display from JavaScript also works).
+   NOTE: a .page-section that has neither "active" nor an inline
+   display style will NOT be visible. */
+.page-section {
+    display: none;
+    margin-bottom: 35px;
+    scroll-margin-top: 70px;
+}
+
+.page-section.active {
+    display: block;
+}
+
+.page-title {
+    margin-bottom: 4px;
+    font-size: 1.6rem;
+}
+
+.page-subtitle {
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+.hint {
+    display: block;
+    font-size: 0.85rem;
+    color: #777777;
+    margin-top: 6px;
+}
+
+/* Lets flex/grid children shrink instead of overflowing the page */
+.container,
+.page-section,
+.card {
+    min-width: 0;
+}
+
+
+/* ==================== 6. CARD DESIGN ==================== */
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #EEEAF5;
+}
+
+.card p {
+    margin-bottom: 12px;
+}
+
+.card ul {
+    padding-left: 22px;
+}
+
+.card li {
+    margin-bottom: 8px;
+}
+
+
+/* ==================== 7. ROW AND COLUMN ==================== */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* FIX 4: min(300px, 100%) so nothing is wider than a small phone screen */
+.col {
+    flex: 1;
+    min-width: min(300px, 100%);
+}
+
+.col-wide {
+    flex: 2;
+    min-width: min(300px, 100%);
+}
+
+.row>.card {
+    flex: 1;
+    min-width: min(300px, 100%);
+}
+
+
+/* ==================== 8. STATISTICS CARDS ==================== */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.stat-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left: 6px solid #663399;
+    transition: transform 0.3s;
+}
+
+.stat-card:hover {
+    transform: scale(1.03);
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1B1F3B;
+    overflow-wrap: anywhere;
+}
+
+.stat-label {
+    color: #666666;
+    font-size: 0.9rem;
+}
+
+
+/* ==================== 9. FORMS ==================== */
+
+fieldset {
+    border: 1px solid #D8D0E8;
+    border-radius: 8px;
+    padding: 12px 16px 16px 16px;
+    margin-bottom: 16px;
+}
+
+legend {
+    font-weight: bold;
+    color: #663399;
+    padding: 0 8px;
+}
+
+.form-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.form-table td {
+    padding: 6px 4px;
+    vertical-align: top;
+}
+
+.form-table td:first-child {
+    width: 35%;
+    padding-top: 12px;
+}
+
+label {
+    font-weight: 600;
+    color: #444444;
+}
+
+.option-label {
+    font-weight: normal;
+    margin-right: 12px;
+}
+
+/* FIX 5: more input types added to the list */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="tel"],
+input[type="search"],
+input[type="url"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #C8C3D4;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    background-color: white;
+}
+
+/* Prevent any field (including type="file") from overflowing */
+input,
+select,
+textarea {
+    max-width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #8E6CC8;
+    border-color: #8E6CC8;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 4px;
+    accent-color: #663399;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
